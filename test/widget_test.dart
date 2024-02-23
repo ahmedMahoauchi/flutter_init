@@ -9,11 +9,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:machines_talk_init/main.dart';
+import 'package:mockito/mockito.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+class MockSharedPreferences extends Mock implements SharedPreferences {}
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    testWidgets('MyApp test', (WidgetTester tester) async {
+      // Create a mock SharedPreferences instance
+      final MockSharedPreferences mockSharedPreferences = MockSharedPreferences();
+
+      // Build our app and trigger a frame.
+      await tester.pumpWidget(MyApp(sharedPreferences: mockSharedPreferences));
+    });
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
@@ -27,4 +36,5 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+
 }

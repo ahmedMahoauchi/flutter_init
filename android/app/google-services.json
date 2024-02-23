@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047250837254",
+    "project_id": "machines-talk",
+    "storage_bucket": "machines-talk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047250837254:android:5f92f7d052ba834cea0887",
+        "android_client_info": {
+          "package_name": "com.example.machines_talk_init"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjc4YDZSAIh6xhVVxkRNgLV-XdFlXdwxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
